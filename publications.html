@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>publications | Gaurav Kunwar</title>
+<meta name="description" content="Gaurav Kunwar: Assistant Professor at DIT University. Research on interpretable and efficient deep learning, biosignals and computer vision.">
+<meta name="author" content="Gaurav Kunwar">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js"></script>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a class="brand" href="index.html"><b>Gaurav</b> Kunwar</a>
+  <div class="nav-links"><a href="index.html">about</a><a href="publications.html" class="active" aria-current="page">publications</a><a href="projects.html">projects</a><a href="cv.html">cv</a><button class="theme-toggle" type="button" aria-label="Toggle dark mode">&#9790;</button></div>
+</div></nav>
+<main>
+
+<div class="post-header"><h1>publications</h1>
+<p class="desc">Accepted, published and under-review work in reverse chronological order. My name is underlined.</p></div>
+<h2 class="bib-group">under review</h2>
+    <div class="pub" id="mxint8">
+      <div class="thumb"><span class="badge">ICMC</span><img src="assets/img/pubs/mxint8_ecg.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="title">Comprehensive Hardware-Aware Quantization of Microscaling Integer Biosignal Transformers for Edge Diagnostics</div>
+        <div class="authors"><span class="me">G. Kunwar</span>, D. Sengupta, Medhavi, and S. Yadav</div>
+        <div class="venue">13th International Conference on Mathematics &amp; Computing (ICMC 2027), IIT Guwahati &middot; Springer LNNS <span class="chip review">Under review</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-mxint8">Abs</button></div>
+        <div class="abstract" id="abs-mxint8">Wearable and bedside ECG devices must run signal-restoration models under tight memory and energy budgets. We train a dual-resolution ResNet&ndash;Transformer masked autoencoder for 12-lead ECG in which every Transformer linear layer, weights and activations alike, uses simulated MXINT8 arithmetic (32-element blocks, shared power-of-two scales, straight-through gradients). On a held-out PTB-XL split it reaches PRD 14.19%, SNR 16.96 dB and Pearson r 0.990 at 500 Hz with 0.87M parameters; the estimated packed size is 1.61 MiB versus 3.36 MiB in FP32. Only 45% of multiply&ndash;accumulates fall in quantized layers, so attention products and convolutions are the next targets. The paper also states what it does not yet show: no FP32 reference, bit-width sweep or patient-level split.</div>
+      </div>
+    </div>
+    <div class="pub" id="ecg-gen">
+      <div class="thumb"><span class="badge">ICMC</span><img src="assets/img/pubs/gan_diffusion_ecg.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="title">Comparing Conditional GAN and Diffusion Models for Synthetic ECG Generation and Minority-Class Augmentation</div>
+        <div class="authors"><span class="me">G. Kunwar</span>, D. Sengupta, Medhavi, and P. Kumar</div>
+        <div class="venue">13th International Conference on Mathematics &amp; Computing (ICMC 2027), IIT Guwahati &middot; Springer LNNS <span class="chip review">Under review</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-ecg-gen">Abs</button></div>
+        <div class="abstract" id="abs-ecg-gen">Class imbalance hurts arrhythmia classifiers, and synthetic beats are one proposed remedy. We compare a class-conditional WGAN-GP and a class-conditional DDPM (about 0.7&ndash;0.8M parameters each) for generating single-lead MIT-BIH beats across five AAMI classes, measuring similarity with MMD, DTW and a Fr&eacute;chet feature distance, and utility with a small 1D CNN. WGAN-GP gave lower MMD in every class; the DDPM gave lower DTW in three classes and a lower Fr&eacute;chet distance (1.34 vs. 2.95). Augmentation raised five-class macro-F1 from 0.662 to 0.750 (WGAN-GP) and 0.743 (DDPM). Results come from one run with a beat-level split, so they do not describe performance on unseen patients.</div>
+      </div>
+    </div>
+    <div class="pub" id="ear-eeg">
+      <div class="thumb"><span class="badge">ICMC</span><img src="assets/img/pubs/ear_eeg.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="title">Subject-Calibrated Unsupervised Spectral-State Discovery from Ear-EEG: A Reproducible Pilot Study with Explicit Label-Audit Reporting</div>
+        <div class="authors"><span class="me">G. Kunwar</span>, D. Sengupta, P. Kumar, and Medhavi</div>
+        <div class="venue">13th International Conference on Mathematics &amp; Computing (ICMC 2027), IIT Guwahati &middot; Springer LNNS <span class="chip review">Under review</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-ear-eeg">Abs</button></div>
+        <div class="abstract" id="abs-ear-eeg">A reproducible pilot pipeline for subject-calibrated discovery of spectral states from 30-second ear-EEG epochs: log-power spectrograms, interpretable spectral and temporal descriptors, per-subject standardisation and per-subject k-means. Auditing the data before modelling showed 139,803 epochs from 128 subjects but every stage label equal to &minus;1, so the work is reported as unsupervised state discovery rather than sleep staging. A leakage-resistant 88/20/20 subject split is released for a later supervised study.</div>
+      </div>
+    </div>
+    <div class="pub" id="neuroscimlnet">
+      <div class="thumb"><span class="badge">ICVGIP</span><img src="assets/img/pubs/neuroscimlnet.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="title">NeuroSciML-Net: Physics-Informed EEG Learning for Cognitive State Classification During Hare Krishna Mahamantra Meditation and Kirtan Kriya</div>
+        <div class="authors">R. K. Rai, S. Parui, M. Mahapatra, <span class="me">G. Kunwar</span>, R. P. Naik, and D. K. Singh</div>
+        <div class="venue">Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP 2026), Kolkata &middot; ACM <span class="chip review">Under review</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-neuroscimlnet">Abs</button></div>
+        <div class="abstract" id="abs-neuroscimlnet">NeuroSciML-Net is a physics-informed, patch-based Transformer that treats multichannel EEG as channel &times; frequency &times; time spectrograms to distinguish Hare Krishna Mahamantra meditation, Kirtan Kriya and resting state. Training adds spectral-consistency and temporal-continuity regularisers. Under leave-one-subject-out cross-validation on 32-channel EEG from 15 participants it reaches 97.84% accuracy, 97.18% macro-F1 and Cohen&rsquo;s &kappa; = 0.96. The small, sex-imbalanced cohort limits generalisability.</div>
+      </div>
+    </div>
+    <div class="pub" id="underwater">
+      <div class="thumb"><span class="badge">RAIT</span><img src="assets/img/pubs/underwater.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="title">Spatiotemporal Physics-Aware Autoencoder for Joint Estimation of Underwater Radiance and Attenuation</div>
+        <div class="authors">A. Acharya, D. Sengupta, P. Jain, Medhavi, S. Pattnaik, A. Nath, A. K. Parida, and <span class="me">G. Kunwar</span></div>
+        <div class="venue">7th International Conference on Recent Advances in Information Technology (RAIT 2027), IIT (ISM) Dhanbad &middot; IEEE <span class="chip review">Under review</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-underwater">Abs</button></div>
+        <div class="abstract" id="abs-underwater">A physics-aware encoder&ndash;decoder prototype predicts radiance, depth, background light and channel-wise attenuation for underwater images. A temporal cross-attention block fuses current and previous frame features, and a differentiable image-formation model regularises the predicted components. The provided run reports a mean PSNR of 16.32 dB over 4,233 LSUI images; the paper states that it does not yet show validated video-level or physically calibrated gains.</div>
+      </div>
+    </div>
+    <div class="pub" id="hw-security">
+      <div class="thumb"><span class="badge">RAIT</span></div>
+      <div>
+        <div class="title">Hardware Security of Deep Neural Network Models and Accelerators: Threats, Vulnerabilities, and Countermeasures</div>
+        <div class="authors">D. Sengupta, Medhavi, P. Jain, A. Acharya, S. Pattnaik, A. Nath, A. K. Parida, and <span class="me">G. Kunwar</span></div>
+        <div class="venue">7th International Conference on Recent Advances in Information Technology (RAIT 2027), IIT (ISM) Dhanbad &middot; IEEE <span class="chip review">Under review</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-hw-security">Abs</button></div>
+        <div class="abstract" id="abs-hw-security">A survey of hardware security threats to DNN accelerators (FPGAs, GPUs and ASICs): side-channel attacks through timing, memory access, power and electromagnetic emissions that leak network topologies, weights or inputs, and hardware Trojans inserted through untrusted supply chains. It groups countermeasures into obfuscation, cryptographic masking and encryption, and architectural hardening, and maps attacks to accelerator components.</div>
+      </div>
+    </div>
+    <div class="pub" id="eeg-review">
+      <div class="thumb"><span class="badge">CS Review</span></div>
+      <div>
+        <div class="title">Human Cognitive Behavior and Brain State Analysis in Different Physiological Conditions using EEG Signal: A Systematic Review</div>
+        <div class="authors"><span class="note">Co-authored manuscript</span></div>
+        <div class="venue">Computer Science Review, Elsevier <span class="chip review">Under review</span></div>
+        <div class="links"></div>
+        
+      </div>
+    </div><h2 class="bib-group">2026</h2>
+    <div class="pub" id="sugarcane">
+      <div class="thumb"><span class="badge">NetCrypt</span><img src="assets/img/pubs/sugarcane_vit.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="title">Sugarcane Leaf Diseases Detection and Quality Assessment through Image Processing with Deep Learning Algorithms</div>
+        <div class="authors"><span class="me">G. Kunwar</span> and A. Dutta</div>
+        <div class="venue">4th International Conference on Networks and Cryptology (NetCrypt 2026), Jawaharlal Nehru University, New Delhi <span class="chip ok">Accepted &middot; oral</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-sugarcane">Abs</button></div>
+        <div class="abstract" id="abs-sugarcane">A deep learning framework for detecting red rot in sugarcane leaves (M.Tech thesis work). Four public datasets are merged into a 2,401-image healthy vs. red-rot set and preprocessed with Gaussian blurring, normalisation and CLAHE. A Vision Transformer and MobileNet are trained with k-fold cross-validation; the ViT reaches F1 96.25% against 93.41% for MobileNet. Integrated Gradients is used to show which image regions drive each prediction. Supported by a CSIR (Government of India) ASPIRE grant.</div>
+      </div>
+    </div>
+    <div class="pub" id="sv-detection">
+      <div class="thumb"><span class="badge">IC2E3</span><img src="assets/img/pubs/sv_detection.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="title">Machine Learning-Based Benchmarking of Structural Variant Detection Using Sequencing Microbes Data</div>
+        <div class="authors">P. Maisnam and <span class="me">G. Kunwar</span></div>
+        <div class="venue">4th International Conference on Computer, Electronics, Electrical Engineering and their Applications (IC2E3-2026), NIT Uttarakhand <span class="chip ok">Accepted &middot; presented</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-sv-detection">Abs</button></div>
+        <div class="abstract" id="abs-sv-detection">Compares Random Forest, XGBoost and Gradient Boosting for detecting structural variants in microbial genomes from long-read (third-generation) sequencing data, after exploration, cleaning, normalisation and splitting. Random Forest reached 0.988 accuracy, against 0.898 for XGBoost and 0.868 for Gradient Boosting.</div>
+      </div>
+    </div>
+    <div class="pub" id="ehr-gnn">
+      <div class="thumb"><span class="badge">AUTOCOM</span></div>
+      <div>
+        <div class="title">Explainable Disease Risk Prediction from Electronic Health Records Using Graph Convolutional Network and SHAP</div>
+        <div class="authors"><span class="me">G. Kunwar</span> and P. Srivastava</div>
+        <div class="venue">AUTOCOM-2026 <span class="chip ok">Accepted</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-ehr-gnn">Abs</button></div>
+        <div class="abstract" id="abs-ehr-gnn">Builds a patient-similarity graph from MIMIC-IV clinical records using cosine similarity and k-nearest neighbours, then predicts in-hospital mortality with GCN and multi-head GAT models. Class imbalance is handled with SMOTE and a weighted loss; SHAP and t-SNE are used to interpret feature importance and learned representations.</div>
+      </div>
+    </div><h2 class="bib-group">2023</h2>
+    <div class="pub" id="air-pollution">
+      <div class="thumb"><span class="badge">ICAECT</span></div>
+      <div>
+        <div class="title">Prediction of Air Pollution using Deep Learning based LSTM and CNN Model</div>
+        <div class="authors"><span class="me">G. Kunwar</span> and R. Jha</div>
+        <div class="venue">3rd International Conference on Advances in Electrical, Computing, Communication and Sustainable Technologies (ICAECT 2023) &middot; IEEE <span class="chip ok">Published</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-air-pollution">Abs</button><a class="btn" href="https://doi.org/10.1109/ICAECT57570.2023.10118248" target="_blank" rel="noopener">DOI</a></div>
+        <div class="abstract" id="abs-air-pollution">Forecasts PM2.5 concentration on the UCI Beijing PM2.5 dataset with CNN and LSTM models. The LSTM reached MAE 7.3 and RMSE 10.4 and the CNN MAE 8.06 and RMSE 10.90, against MAE 10.4 and RMSE 14.5 for a CBGRU baseline.</div>
+      </div>
+    </div>
+    <div class="pub" id="lung">
+      <div class="thumb"><span class="badge">ISCON</span></div>
+      <div>
+        <div class="title">Predicting the Patient&rsquo;s Severity Using Machine Learning Applied to Lungs MRI Images</div>
+        <div class="authors">R. Jha and <span class="me">G. Kunwar</span></div>
+        <div class="venue">6th International Conference on Information Systems and Computer Networks (ISCON 2023), GLA University, Mathura &middot; IEEE <span class="chip ok">Published</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-lung">Abs</button><a class="btn" href="https://doi.org/10.1109/ISCON57294.2023.10111986" target="_blank" rel="noopener">DOI</a></div>
+        <div class="abstract" id="abs-lung">Reviews image-processing and deep learning methods for early lung cancer detection and applies CLAHE enhancement with ResNet-50 and DenseNet-169 classifiers, reporting accuracies of 98.69% and 99.67%.</div>
+      </div>
+    </div>
+    <div class="pub" id="phishing">
+      <div class="thumb"><span class="badge">ISCON</span></div>
+      <div>
+        <div class="title">Machine Learning based URL Analysis for Phishing Detection</div>
+        <div class="authors">R. Jha and <span class="me">G. Kunwar</span></div>
+        <div class="venue">6th International Conference on Information Systems and Computer Networks (ISCON 2023), GLA University, Mathura &middot; IEEE <span class="chip ok">Published</span></div>
+        <div class="links"><button class="btn" type="button" data-abs="abs-phishing">Abs</button><a class="btn" href="https://doi.org/10.1109/ISCON57294.2023.10112057" target="_blank" rel="noopener">DOI</a></div>
+        <div class="abstract" id="abs-phishing">Classifies web pages as legitimate or phishing from URL-based features with Random Forest, KNN and logistic regression on a balanced set of 11,430 URLs with 87 features. Random Forest performed best (precision 97.5%, recall 99.1%, F1 97.3%).</div>
+      </div>
+    </div>
+
+</main>
+<footer>&copy; 2026 Gaurav Kunwar &middot; Last updated: November 2026</footer>
+</body>
+</html>
